@@ -13,3 +13,4 @@ BB=2
 CC=3
 print("AA = ", AA)
 print("BB = ", BB)
+print("CC = ", CC)

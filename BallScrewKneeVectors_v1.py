@@ -10,5 +10,6 @@ import os
 
 AA=1
 BB=2
+CC=3
 print("AA = ", AA)
 print("BB = ", BB)

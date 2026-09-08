@@ -9,5 +9,6 @@ from pathlib import Path
 import os
 
 AA=1
-
+BB=2
 print("AA = ", AA)
+print("BB = ", BB)

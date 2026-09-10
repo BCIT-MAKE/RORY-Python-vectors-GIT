@@ -11,10 +11,10 @@ from vectoroperations import rotate2d
 
 # %%
 O=np.array([0,0]) #Knee center
-P0=np.array([0,0.05]) #Patella or lever arm middle position
+P0=np.array([0,0.10]) #Patella or lever arm middle position
 P = rotate2d(P0, 90)   # anglein degrees
 H_bscrew=0.10 # Height of ball screw above knee center.
-
+Forceballscrew=500 #Force applied by ball screw in N
 
 # Rotate2D(vector, angle in degrees CW +)
 F = rotate2d(P, 170)*2   # foot vector
@@ -49,7 +49,7 @@ print('L_pushrodmin:', L_pushrodmin)
 
 # %% Torque calculations
 
-Fpushrod = (P - B) / np.linalg.norm(P - B) * 500
+Fpushrod = (P - B) / np.linalg.norm(P - B) * Forceballscrew
 torque_O = np.cross(P, Fpushrod)
 
 
@@ -85,3 +85,6 @@ plt.legend()
 plt.show(block=False)
 input("Press Enter to continue...")
 plt.close('all')
+
+
+# %%

@@ -36,8 +36,8 @@ def triangle3rdpoint(P,OB,LB_coupler,LB_lever):
     dir_OB2Pvec = OB2Pvec / LB_OB2Pvec  # Unit vector from OB to P
     ver_OB2Pvec = np.array([-dir_OB2Pvec[1], dir_OB2Pvec[0]])  # Perpendicular unit vector
 
-    Lx=(LB_lever**2+LB_OB2Pvec**2 - LB_coupler**2) / (2 * LB_OB2Pvec)
-    Ly=np.sqrt(LB_lever**2 - Lx**2)
+    Lx=(LB_lever**2+LB_OB2Pvec**2 - LB_coupler**2) / (2 * LB_OB2Pvec) # horizonal dispaclement along the OB2P vec
+    Ly=np.sqrt(LB_lever**2 - Lx**2) # vertical displacement along the OB to P vec. 
 
     PBvec = OB + Lx * dir_OB2Pvec + Ly * ver_OB2Pvec
 
